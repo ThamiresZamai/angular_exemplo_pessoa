@@ -1,0 +1,7 @@
+<div>
+  Input no pai: <input type="text" [(ngModel)]="texto">
+</div>
+
+<div style="background-color: crimson">
+  <app-inner-component *ngIf="texto" [textoDoPai]="texto"></app-inner-component>
+</div>

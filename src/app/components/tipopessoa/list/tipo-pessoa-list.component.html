@@ -1,0 +1,23 @@
+
+<div>
+  <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>cpf</th>
+          <th>email</th>
+          <th>cep</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of pessoas">
+          <td>{{item.nome}}</td>
+          <td>{{item.cpf}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.endereco.cep}}</td>
+          <button (click)="excluir(item.cpf)">Excluir</button>
+          <button (click)="alterar(item.cpf)">Alterar</button>
+        </tr>
+      </tbody>
+  </table>
+</div>
