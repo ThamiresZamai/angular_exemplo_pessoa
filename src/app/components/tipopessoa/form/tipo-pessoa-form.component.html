@@ -4,25 +4,26 @@
 </h1>
 
  <label>Nome:
-    <input [(ngModel)]="pessoa.nome"><br>
+    <input [(ngModel)]="pessoa.nome" name="pessoa.nome"> 
+    <br>
   <label>cpf:
     <input [(ngModel)]="pessoa.cpf"><br>
   <label>email:
     <input [(ngModel)]="pessoa.email"><br>
   <label>cep:
-    <input [(ngModel)]="pessoa.endereco.cep"><br>
+    <input [(ngModel)]="pessoa.enderecodto.cep"><br>
   <label>logradouro:
-    <input [(ngModel)]="pessoa.endereco.logradouro"><br>
+    <input [(ngModel)]="pessoa.enderecodto.logradouro"><br>
   <label>numero:
-    <input [(ngModel)]="pessoa.endereco.numero"><br>
+    <input [(ngModel)]="pessoa.enderecodto.numero"><br>
   <label>complemento:
-    <input [(ngModel)]="pessoa.endereco.complemento"><br>
+    <input [(ngModel)]="pessoa.enderecodto.complemento"><br>
   <label>bairro:
-    <input [(ngModel)]="pessoa.endereco.bairro"> <br>
+    <input [(ngModel)]="pessoa.enderecodto.bairro"> <br>
   <label>cidade:
-    <input [(ngModel)]="pessoa.endereco.cidade">  <br>
+    <input [(ngModel)]="pessoa.enderecodto.cidade">  <br>
   <label>uf:
-    <input [(ngModel)]="pessoa.endereco.uf"> <br>
+    <input [(ngModel)]="pessoa.enderecodto.uf"> <br>
 
 
   <button (click)="salvar()">Salvar</button>

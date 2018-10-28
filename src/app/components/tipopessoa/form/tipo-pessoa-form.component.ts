@@ -3,6 +3,7 @@ import { Pessoa } from '../../model/pessoa';
 import { PessoaService } from '../../service/pessoa.service';
 import { Router } from '@angular/router';
 import { Endereco } from '../../model/endereco';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-tipo-pessoa-form',
@@ -12,16 +13,23 @@ import { Endereco } from '../../model/endereco';
 export class TipoPessoaFormComponent implements OnInit {
 
   pessoa : Pessoa;
-  endereco : Endereco;
+  //enderecodto : Endereco;
   constructor(
     private service : PessoaService,
-    private router : Router
+    private router : Router,
+    private routerx : ActivatedRoute
+
     ) { }
 
   ngOnInit() {
-    this.endereco = new Endereco();
-    this.pessoa=new Pessoa();
-    this.pessoa.endereco = new Endereco();
+    this.pessoa = new Pessoa();
+    this.pessoa.enderecodto = new Endereco();    
+
+    this.routerx.queryParams.subscribe(params => {
+      this.pessoa = JSON.parse(params["pessoa"]);
+      });
+     // this.pessoa.nome ="jones";
+      console.log(this.pessoa);
   }
 
   salvar(){
@@ -29,4 +37,5 @@ export class TipoPessoaFormComponent implements OnInit {
       this.router.navigate(['/tipo-pessoa/list']);
     })
   }
+
 }
