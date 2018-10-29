@@ -1,0 +1,23 @@
+<h1 style="color: darkcyan">
+    Livro
+  </h1>
+  
+   <label>Título:
+      <input [(ngModel)]="livro.titulo" name="livro.titulo"> 
+      <br>
+    <label>Data:
+      <input [(ngModel)]="livro.dataPublicacao"><br>
+    <label>Autor:
+        <select [(ngModel)]="livro.autordto.id" >
+            <option value="undefined">Selecione</option>
+            <option value="{{item.id}}" *ngFor="let item of autores">{{item.nome}}</option>
+        </select><br>
+        <label>Categoria:
+        <select [(ngModel)]="livro.categoriadto.id" >
+            <option value="undefined">Selecione</option>
+            <option value="{{item.id}}" *ngFor="let item of categorias">{{item.descricao}} </option><br>
+        </select><br>
+ 
+  
+  
+    <button (click)="salvar()">Salvar</button>

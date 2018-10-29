@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: '../app/components/tipopessoa/pessoa.module#PessoaModule'
   }, 
   { 
+    path: 'tipo-livro', 
+    loadChildren: '../app/components/tipolivro/tipo-livro.module#TipoLivroModule'
+  }, 
+  { 
     path: 'tipo-produto', 
     loadChildren: '../app/components/tipoproduto/tipo-produto.module#TipoProdutoModule'
   }, 

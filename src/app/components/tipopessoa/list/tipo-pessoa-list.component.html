@@ -3,6 +3,7 @@
   <table>
       <thead>
         <tr>
+          <th>ID</th>
           <th>Nome</th>
           <th>cpf</th>
           <th>email</th>
@@ -12,12 +13,13 @@
       </thead>
       <tbody>
           <tr *ngFor="let item of pessoas">
+            <td>{{item.id}}</td>
             <td>{{item.nome}}</td>
             <td>{{item.cpf}}</td>
             <td>{{item.email}}</td>
             <td>{{item.enderecodto.cep}}</td>
             <td>
-            <button (click)="excluir(item.cpf)">Excluir</button>
+            <button (click)="excluir(item.id)">Excluir</button>
             <button (click)="alterar(item)">Alterar</button>
           </td>
         </tr>

@@ -34,9 +34,6 @@ export class TipoPessoaListComponent implements OnInit {
     this.service.delete(cpf).subscribe(() => this.carregartabela())
   }
   alterar(alt:Pessoa): void{
-    //this.pessoa = Object.create(alt); 
-    //this.pessoa.nome = "Jones";
-   
     this.pessoa = new Pessoa();
     this.pessoa = Object.assign(alt);
     //console.log(this.pessoa);

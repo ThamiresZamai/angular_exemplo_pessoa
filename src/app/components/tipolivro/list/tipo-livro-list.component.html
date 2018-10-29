@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Data de publicação</th>
+      <th>Nome Autor</th>
+      <th>Categoria</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of livros">
+        <td>{{item.titulo}}</td>
+        <td>{{item.data}}</td>
+        <td>{{item.autordto.nome}}</td>
+        <td>{{item.categoriadto.descricao}}</td>
+        <td>
+        <button (click)="excluir(item.id)">Excluir</button>
+        <button (click)="alterar(item.id)">Alterar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
